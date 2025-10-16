@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Landlord Dashboard</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <header>
+    <h1>Landlord Dashboard</h1>
+    <button onclick="logout()">Logout</button>
+  </header>
+
+  <main>
+    <section class="apartment-grid" id="apartmentGrid">
+      <!-- Apartment cards generated via JS -->
+    </section>
+  </main>
+
+  <!-- Tenant Info Modal -->
+  <div class="modal" id="tenantModal">
+    <div class="modal-content">
+      <h2>Tenant Info - Apartment <span id="aptDisplay"></span></h2>
+      <form id="tenantForm">
+        <input type="hidden" id="aptNumber" />
+        <label>Name: <input type="text" id="name" required /></label>
+        <label>Contact: <input type="text" id="contact" required /></label>
+        <label>Place of Work: <input type="text" id="work" required /></label>
+        <label>Next of Kin: <input type="text" id="kin" required /></label>
+        <button type="submit">Save</button>
+        <button type="button" onclick="closeModal()">Cancel</button>
+      </form>
+
+      <hr/>
+
+      <div>
+        <h3>Uploaded Proofs of Payment</h3>
+        <ul id="paymentList"></ul>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/landlord.js"></script>
+</body>
+</html>

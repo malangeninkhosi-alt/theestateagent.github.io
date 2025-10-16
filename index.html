@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Rental Tracker - Login</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <div class="login-container">
+    <h2>Login</h2>
+    <form id="loginForm">
+      <label>
+        Role:
+        <select id="role" required>
+          <option value="landlord">Landlord</option>
+          <option value="tenant">Tenant</option>
+        </select>
+      </label>
+      <label>
+        Apartment Number (Tenant Only):
+        <input type="number" id="apartmentNumber" min="1" max="10" />
+      </label>
+      <label>Password:
+        <input type="password" id="password" required />
+      </label>
+      <button type="submit">Login</button>
+    </form>
+  </div>
+
+  <script src="js/auth.js"></script>
+</body>
+</html>

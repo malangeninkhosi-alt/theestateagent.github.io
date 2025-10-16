@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Tenant Dashboard</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <header>
+    <h1>Tenant Dashboard</h1>
+    <button onclick="logout()">Logout</button>
+  </header>
+
+  <main>
+    <section class="profile-section">
+      <h2>My Profile (Apartment <span id="aptNumber"></span>)</h2>
+      <ul id="profileDetails"></ul>
+    </section>
+
+    <section class="upload-section">
+      <h2>Upload Proof of Payment</h2>
+      <form id="uploadForm">
+        <input type="file" id="paymentProof" accept="image/*,application/pdf" required />
+        <button type="submit">Upload</button>
+      </form>
+    </section>
+
+    <section class="history-section">
+      <h2>My Payment Uploads</h2>
+      <ul id="uploadedFilesList"></ul>
+    </section>
+  </main>
+
+  <script src="js/tenant.js"></script>
+</body>
+</html>
